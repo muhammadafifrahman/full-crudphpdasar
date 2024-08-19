@@ -1,6 +1,6 @@
 # Source Code CRUD PHP Dasar MySQL
 
-Teknologi :
+Teknologi yang digunakan :
 
 - PHP 8.\*
 - Bootsrap 4.\*
