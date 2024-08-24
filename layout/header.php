@@ -32,6 +32,8 @@ include 'config/app.php';
     <link rel="stylesheet" href="assets-template/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
     <!-- bootsrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="assets-template/plugins/jquery/jquery.min.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -78,29 +80,38 @@ include 'config/app.php';
 
                         <!-- munculkan saat login admin dan barang -->
                         <?php if ($_SESSION['level'] == 1 or $_SESSION['level'] == 2) : ?>
-                        <li class="nav-item">
-                            <a href="index.php" class="nav-link">
-                                <i class="nav-icon fas fa-list"></i>
-                                <p>
-                                    Daftar Barang
-                                </p>
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a href="index.php" class="nav-link">
+                                    <i class="nav-icon fas fa-list"></i>
+                                    <p>
+                                        Daftar Barang
+                                    </p>
+                                </a>
+                            </li>
                         <?php endif; ?>
-                        
+
                         <!-- munculkan saat login admin dan mahasiswa -->
                         <?php if ($_SESSION['level'] == 1 or $_SESSION['level'] == 3) : ?>
+                            <li class="nav-item">
+                                <a href="mahasiswa.php" class="nav-link">
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>
+                                        Daftar Mahasiswa
+                                    </p>
+                                </a>
+                            </li>
+                        <?php endif; ?>
+
+
                         <li class="nav-item">
-                            <a href="mahasiswa.php" class="nav-link">
+                            <a href="pegawai.php" class="nav-link">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>
-                                    Daftar Mahasiswa
+                                    Daftar Pegawai (Realtime)
                                 </p>
                             </a>
                         </li>
-                        <?php endif; ?>
-                        
-                        
+
                         <li class="nav-item">
                             <a href="akun.php" class="nav-link">
                                 <i class="nav-icon fas fa-user-cog"></i>
